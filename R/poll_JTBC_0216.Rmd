@@ -27,7 +27,7 @@ rates.df
 ## Barplot(R Base)
 
 ```{r, fig.width = 8, fig.height = 4}
-par(family = "HCR Dotum LVT")
+par(family = "")
 b1 <- barplot(t(as.matrix(rates.df[, 2:3])), 
         axes = FALSE, 
         ylim = c(0, 65), 
@@ -67,7 +67,7 @@ str(rates.df.melt)
 
 ```{r, fig.width = 8, fig.height = 4}
 library(ggplot2)
-source("./theme_kr.R")
+# source("./theme_kr.R")
 g0 <- ggplot(data = rates.df.melt, 
              mapping = aes(x = candidates.f, y = rates, fill = week)) 
 (g1 <- g0 + 
@@ -82,8 +82,8 @@ g2 <- g1 +
             size = 5)
 g2
 g3 <- g2 +
-  theme_bw() +
-  theme.kr
+  theme_bw() 
+#  theme.kr
 g3
 g4 <- g3 + 
     scale_fill_manual(name = "", 
@@ -106,7 +106,7 @@ g7 <- g6 +
 g7
 g8 <- g7 +
   theme(plot.title = element_text(hjust = 0.5), 
-        plot.subtitle = element_text(family = "HCR Dotum LVT"),
+        plot.subtitle = element_text(family = ""),
         legend.position = c(0.9, 0.7))
 g8
 ```
