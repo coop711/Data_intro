@@ -27,7 +27,9 @@ str(sejong.poll.kr)
 ```{r, kable, echo = FALSE, results = 'asis'}
 v.names.kr <- c("집계", "찬반", "계급", "지역", "관료여부")
 # kable(sejong.poll.kr[c(4, 3, 5, 2, 1)])
-kable(sejong.poll.kr[c(4, 3, 5, 2, 1)], col.names = v.names.kr[c(4, 3, 5, 2, 1)], align = c(rep('c', 4), 'r'))
+kable(sejong.poll.kr[c(4, 3, 5, 2, 1)], 
+      col.names = v.names.kr[c(4, 3, 5, 2, 1)], 
+      align = c(rep('c', 4), 'r'))
 ```
 
 <!--

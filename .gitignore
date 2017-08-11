@@ -5,4 +5,5 @@
 .Ruserdata
 R/*.html
 R/*.rda
+R/*.RData
 R/rsconnect/*
